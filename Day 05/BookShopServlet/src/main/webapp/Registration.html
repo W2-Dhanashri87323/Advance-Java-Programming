@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration Page</title>
+</head>
+<body>
+
+	<h2 align ='center'>Registration</h2>
+
+	<form action="registration" method="post">
+
+		<table cellpadding='10'>
+			<tr>
+				<td><label for="text"> Name : </label></td>
+				<td><input type="text" name="name"
+					placeholder="Enter your name" required></td> 
+			</tr>
+			<tr>
+				<td><label for="email"> Email : </label></td>
+				<td><input type="email" id="email" name="email"
+					placeholder="Enter your email" required></td>
+			</tr>
+			<tr>
+				<td><label for="password"> Password : </label></td>
+				<td><input type="password" id="password" name="password"
+					placeholder="Enter your password" required></td>
+			</tr>
+			<tr>
+				<td><label for="number"> Mobile : </label></td>
+				<td><input type="number" name="mobile"
+					placeholder="Enter your MobileNo" required></td>
+			</tr>
+			<tr>
+				<td><label for="date"> BirthDate : </label></td>
+				<td><input type="date" name="birth"
+					placeholder="Enter your BirthDate" required></td>
+			</tr>
+			<tr>
+				<td><label for="address"> Address : </label></td>
+				<td><textarea name="address" placeholder="Enter your Address"
+						required></textarea></td>
+			</tr>		
+			<tr>
+				<td colspan="2"><input type="submit" value="Register Here"></td>
+			</tr>
+		</table>
+
+	</form>
+</body>
+</html>
