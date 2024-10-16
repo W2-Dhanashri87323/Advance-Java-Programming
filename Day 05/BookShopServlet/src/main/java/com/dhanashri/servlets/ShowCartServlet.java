@@ -80,7 +80,7 @@ public class ShowCartServlet extends HttpServlet {
 		
 		out.println("<br>");
 		out.println("</table>");	
-		out.println("<p><a href='logout'> Sign Out </a></p>\r\n");
+		out.println("<p><a href='Logout.html'> Sign Out </a></p>\r\n");
 		out.println("</body>\r\n"
 				+ "</html>");
 		

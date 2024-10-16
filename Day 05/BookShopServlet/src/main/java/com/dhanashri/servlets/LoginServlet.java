@@ -1,3 +1,8 @@
+
+
+
+
+
 package com.dhanashri.servlets;
 
 import java.io.IOException;
@@ -42,9 +47,6 @@ public class LoginServlet extends HttpServlet {
 		try (CustomerDao cdao = new CustomerDao()) {
 			Customer dbCust = cdao.findByEmail(email);
 		if (dbCust != null && password.equals(dbCust.getPassword())) {
-			resp.sendRedirect("subjects");
-		
-
 			// store user object into session
 			List<Integer> items = new ArrayList<Integer>();
 			session.setAttribute("items", items);

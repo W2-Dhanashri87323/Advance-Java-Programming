@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 import java.util.List;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,6 +14,7 @@ import com.dhanashri.daos.BookDao;
 import com.dhanashri.entities.Book;
 
 @SuppressWarnings("serial")
+@WebServlet(value = "/booklist")
 public class BookListServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -62,9 +64,9 @@ public class BookListServlet extends HttpServlet {
 			out.printf("<td>%f</td>", book.getPrice());
 			
 			out.printf(
-		"<td align='center'><a href='editbook?bookId=%d'><img src='images/edit.png' alt='Edit' width='26' height='26'/></a></td>", book.getId());
+		"<td align='center'><a href='editbook?bookId=%d'><img src='images/edit.jpg' alt='Edit' width='26' height='26'/></a></td>", book.getId());
 			out.printf(
-		"<td align='center'><a href='deletebook?bookId=%d'><img src='images/delete.png' alt='Delete' width='28' height='28'/></a></td>",book.getId());
+		"<td align='center'><a href='delbook?bookId=%d'><img src='images/delete.png' alt='Delete' width='28' height='28'/></a></td>",book.getId());
 			out.println("</tr>");
 		}
 
@@ -76,7 +78,7 @@ public class BookListServlet extends HttpServlet {
 		out.println("<table>");
 		String msg = (String) req.getAttribute("msg"); // request to request scope 
 		if(msg!= null) {
-			out.println("<h4>" + msg +"<h4>")
+			out.println("<h4>" + msg +"<h4>");
 		}
 		out.println("</fieldset>");
 

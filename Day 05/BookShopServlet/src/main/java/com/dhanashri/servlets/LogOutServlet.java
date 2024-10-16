@@ -29,22 +29,7 @@ public class LogOutServlet extends HttpServlet {
 		HttpSession session = req.getSession();
 		session.invalidate();
 		
-	     PrintWriter out = resp.getWriter();
-	     out.println("<!DOCTYPE html>\r\n"
-	     		+ "<html>\r\n"
-	     		+ "<head>\r\n"
-	     		+ "<meta charset=\"ISO-8859-1\">\r\n"
-	     		+ "<title>Logout Page</title>\r\n"
-	     		+ "</head>\r\n"
-	     		+ "<body>\r\n"
-	     		+ "	<h2 align= 'center'>Logged out Successfully ! </h2>\r\n"
-	     		+ "	<h2 align= 'center'>Thank You </h2>\r\n"
-	     		+ "	<p align= 'center'>\r\n"
-	     		+ "		<a href=\"Login.html\">Login Again</a>\r\n"
-	     		+ "	</p>\r\n"
-	     		+ "</body>\r\n"
-	     		+ "</html>");
-	     
+	     resp.sendRedirect("/ServletProject/Logout.html");
 	}
 		
 	}
