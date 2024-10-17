@@ -7,19 +7,20 @@ import com.dhanashri.daos.BookDao;
 import com.dhanashri.entities.Book;
 
 public class BooksBean {
-	private String subjects;
+	private String subject;
 	private List<Book> books;
 	 
 	public BooksBean() {
 		this.books = new ArrayList<Book>();
 	}
 
-	public String getSubjects() {
-		return subjects;
+	public String getSubject() {
+		return subject;
 	}
 
-	public void setSubjects(String subjects) {
-		this.subjects = subjects;
+	public void setSubject(String subject) {
+		this.subject = subject;
+		System.out.println(subject);
 	}
 
 	public List<Book> getBooks() {
@@ -32,7 +33,10 @@ public class BooksBean {
 	
 	public void findBooks() {
 		try(BookDao dao = new BookDao()) {
-	     	this.books = dao.findBySubject(this.subjects);		
+	     	this.books = dao.findBySubject(this.subject);	
+	     	for (Book book : books) {
+			System.out.println(book);	
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

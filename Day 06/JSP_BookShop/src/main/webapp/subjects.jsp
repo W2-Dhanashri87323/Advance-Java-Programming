@@ -13,7 +13,7 @@
 	<jsp:useBean id="subObj" class="com.dhanashri.beans.SubjectsBean" />
 	${subObj.fetchSubjects()}
 
-	<form action="books.jsp" method="post">
+	<form action="Books.jsp" method="post">
 
 		<c:forEach var="sub" items="${subObj.subjects}">
 			<input type="radio" name="subject" value= "${sub}"/> ${sub} <br>

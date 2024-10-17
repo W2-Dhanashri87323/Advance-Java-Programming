@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<!-- bean definition: setter based dependency injection -->
+	<bean id="b1" class="com.dhanashri.dmc.Box">
+		<property name="length" value="5" />
+		<property name="breadth" value="4" />
+		<property name="height" value="2" />
+	</bean>
+
+	<!-- bean definition: constructor based dependency injection -->
+	<bean id="b2" class="com.dhanashri.dmc.Box">
+		<constructor-arg index="0" value="7" />
+		<constructor-arg index="1" value="9" />
+		<constructor-arg index="2" value="8" />
+
+	</bean>
+
+</beans>
