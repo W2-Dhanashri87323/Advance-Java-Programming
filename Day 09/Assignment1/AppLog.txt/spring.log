@@ -1,0 +1,3 @@
+2024-11-01 08:26:47.524  INFO 15688 --- [main] com.dhanshri.Assignment1Application      : Starting Assignment1Application using Java 11.0.24 on DESKTOP-IADEURG with PID 15688 (E:\SUNBEAM\ADV JAVA\Day 09\Assignment1\target\classes started by DELL in E:\SUNBEAM\ADV JAVA\Day 09\Assignment1)
+2024-11-01 08:26:47.527  INFO 15688 --- [main] com.dhanshri.Assignment1Application      : No active profile set, falling back to 1 default profile: "default"
+2024-11-01 08:26:48.035  INFO 15688 --- [main] com.dhanshri.Assignment1Application      : Started Assignment1Application in 0.852 seconds (JVM running for 1.724)
