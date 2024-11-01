@@ -10,7 +10,7 @@
 <body>
 
 
-<jsp:useBean id="lb" class ="com.dhanashri.beans.LoginBean"></jsp:useBean>
+<jsp:useBean id="lb" class ="com.dhanashri.beans.LoginBean" scope="session"></jsp:useBean>
 <jsp:setProperty  name="lb" property="*"/>
 ${lb.authenticate()}
 

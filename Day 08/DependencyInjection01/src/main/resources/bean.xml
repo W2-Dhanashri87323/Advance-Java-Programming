@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="p1" class="com.dhanashri.Person">
+		<property name="name" value="Dhanashri" />
+		<property name="age" value="23" />
+		<property name="mobile" value="7758067095" />
+	</bean>
+
+	<bean id="acc" class="com.dhanashri.Account">
+		<property name="accNo" value="2020" />
+		<property name="type" value="saving" />
+		<property name="balance" value="200000" />
+		<property name="accHolder" ref="p1" />
+	</bean>
+
+</beans>
